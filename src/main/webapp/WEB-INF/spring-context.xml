@@ -41,6 +41,12 @@
 		<property name="jpaVendorAdapter">
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
 		</property>
+		<property name="jpaProperties">
+			<props>
+        		<prop key="hibernate.dialect">${db.dialect}</prop>
+			</props>
+		</property>
+
 	</bean>
 	
 	<!-- gerenciamento da transação pelo spring -->
